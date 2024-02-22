@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid white;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Animasyon için geçiş efekti ekleniyor */
+}
+
+.covered {
+  background-color: black;
+}
+
+#message {
+  color: red;
+}
+
+#winMessage {
+  color: green;
+}
+
+#restartBtn {
+  display: inline-block;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+#shuffleAndCoverBtn {
+  display: inline-block;
+  pointer-events: auto;
+  opacity: 1;
+}
+nav a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #333;
+  font-weight: bold;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="MemoryGame.css">
+</head>
+<body>
+    <h1>Memory Game</h1>
+    <div class="container" id="cardContainer">
+        <div class="column" onclick="revealCard(this, 'card1')">
+            <img src="cards/card1.svg" alt="Card 1">
+        </div>
+        <div class="column" onclick="revealCard(this, 'card2')">
+            <img src="cards/card2.svg" alt="Card 2">
+        </div>
+        <div class="column" onclick="revealCard(this, 'card3')">
+            <img src="cards/card3.svg" alt="Card 3">
+        </div>
+        <div class="column" onclick="revealCard(this, 'card4')">
+            <img src="cards/card4.svg" alt="Card 4">
+        </div>
+        <div class="column" onclick="revealCard(this, 'card5')">
+            <img src="cards/card5.svg" alt="Card 5">
+        </div>
+    </div>
+
+    <button id="shuffleAndCoverBtn" onclick="shuffleAndCoverCards()">Start</button>
+    <button id="restartBtn" onclick="restartGame()">Restart</button>
+    <p id="score">Skor: 0</p>
+    <p id="message"></p>
+    <p id="winMessage"></p>
+
+    <nav>
+        <a href="aboutme.html">&#8594About Me&#8592</a>
+    </nav>
+
+    <script src="MemoryGame.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
