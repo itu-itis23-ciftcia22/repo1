@@ -1,26 +1,31 @@
 #include <stdio.h>
+#include <stdbool.h>
+#include <math.h>
 
 int main() {
 
   double g=1;
-  long int x;
-  int y;
+  int x;
+  double ig = 0;
+  double threshold = 1e-4;
+  double fark = 2 * threshold;
+
 
   printf("Hangi tam sayinin karekokunu hesaplamak istersiniz: ");
-  scanf("%ld", &x);
+  scanf("%d", &x);
 
-  do {
-     printf("1 ile 10 arasindan bir sayi seciniz, ne kadar buyuk bir sayi yazarsaniz sonucunuz o kadar dogru olur: ");
-     scanf("%d", &y);
-  }
-  while( y>11 || y<1);
+  int asama = 1;
 
-  for(int i=0; i<y ;i++){
+  do
+  {
+      ig = (g + x/g) / 2;
+      printf("Iteration: %d - Current guess: %.3lf  improved guess: %.3lf\n",asama,g,ig);
+      g = ig;
+      fark = fabs(g*g - x);
+      asama++;
+  } while(fark>=threshold);
 
-    g = (g + x/g) / 2 ; // if An+1 = ( An + x/An ) / 2,  lim n=>infinity An = sqrt(x)
+  printf("%d sayisinin karekoku %.3lf",x, g);
 
-  }
-
-  printf("%ld sayisinin karekoku %.4lf olmalidir.", x, g);
   return 0;
 }

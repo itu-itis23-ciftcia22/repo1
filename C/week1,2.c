@@ -14,5 +14,5 @@ int main (){
    double bmi = kilo / (boy * boy);
 
    printf("Vucut kitle endeksiniz: %.2lf \n", bmi);
-
+   
 }
